@@ -10,22 +10,9 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import NVActivityIndicatorView
+import Intents
 
-
-struct Data: Codable {
-    let timetable: [Timetable]
-}
-
-struct Timetable: Codable {
-    let id, subject_id, teacher_id, bundle_id, day_id, time_id, subject_type_id: String
-    let time_value: TimeValue
-}
-
-struct TimeValue: Codable {
-    let start_time, end_time: String
-}
-
-class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NVActivityIndicatorViewable {
+class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NVActivityIndicatorViewable, Dateble {
 
     @IBOutlet weak var tableView: UITableView!
     var saveData = [Timetable]()
@@ -38,6 +25,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NVAc
         tableView.addSubview(refreshControl)
         refreshControl.addTarget(self, action: #selector(refreshScheduleData(_:)), for: .valueChanged)
         startAnimating(CGSize(width: 30, height: 30), message: "Loading...", type: .circleStrokeSpin)
+        configSiri()
         getData()
     }
     
@@ -148,7 +136,15 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NVAc
 //            }
 //        }
 
-        
+        if self.checkTimeRange() == Int(tmpData[indexPath.row].time_id) && self.getDayOfWeek() == Int(tmpData[indexPath.row].day_id)!  {
+            cell.statusView.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
+            cell.statusView.isHidden = false
+            cell.statusLabel.text = "Now"
+        }
+        else if self.checkTimeRange() == Int(tmpData[indexPath.row].time_id)! - 1 && self.getDayOfWeek() == Int(tmpData[indexPath.row].day_id)!  {
+            cell.statusView.isHidden = false
+            cell.statusLabel.text = "Next"
+        }
         cell.teacherNameLabel.text = tmpData[indexPath.row].teacher_id
         cell.subjectNameLabel.text = tmpData[indexPath.row].subject_id
         cell.roomNumberLabel.text = tmpData[indexPath.row].bundle_id
@@ -179,6 +175,69 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NVAc
                 }
             case .failure(let error):
                 print(error)
+            }
+        }
+    }
+    
+    func configSiri() {
+        let intent = LessonNowIntent()
+        
+        intent.suggestedInvocationPhrase = "What lesson is now"
+        
+        let interaction = INInteraction(intent: intent, response: nil)
+        
+        interaction.donate { (error) in
+            if error != nil {
+                if let error = error as NSError? {
+                    print("Interaction donation failed: \(error.description)")
+                } else {
+                    print("Successfully donated interaction")
+                }
+            }
+        }
+        
+        let intent1 = LessonNextIntent()
+        
+        intent1.suggestedInvocationPhrase = "What lesson is next"
+        
+        let interaction1 = INInteraction(intent: intent1, response: nil)
+        
+        interaction1.donate { (error) in
+            if error != nil {
+                if let error = error as NSError? {
+                    print("Interaction donation failed: \(error.description)")
+                } else {
+                    print("Successfully donated interaction")
+                }
+            }
+        }
+        
+        let intent2 = LessonCalendarIntent()
+        
+        intent2.suggestedInvocationPhrase = "What is the"
+        intent2.sequencing = "first"
+        intent2.dayOfWeek = "Saturday"
+        let interaction2 = INInteraction(intent: intent2, response: nil)
+        
+        interaction2.donate { (error) in
+            if error != nil {
+                if let error = error as NSError? {
+                    print("Interaction donation failed: \(error.description)")
+                } else {
+                    print("Successfully donated interaction")
+                }
+            }
+        }
+    }
+    
+    @IBAction func addToSiri(_ sender: Any) {
+        INPreferences.requestSiriAuthorization { status in
+            switch status {
+            case .authorized:
+                print("We have access!")
+            default:
+                print("Not granted")
+                break
             }
         }
     }

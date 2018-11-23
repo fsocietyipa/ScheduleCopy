@@ -8,6 +8,15 @@
 
 import UIKit
 
+extension UIView {
+    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        layer.mask = mask
+    }
+}
+
 class SubjectCell: UITableViewCell {
 
     @IBOutlet weak var startTimeLabel: UILabel!
@@ -16,6 +25,8 @@ class SubjectCell: UITableViewCell {
     @IBOutlet weak var teacherNameLabel: UILabel!
     @IBOutlet weak var subjectTypeLabel: UILabel!
     @IBOutlet weak var roomNumberLabel: UILabel!
+    @IBOutlet weak var statusView: UIView!
+    @IBOutlet weak var statusLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,8 +35,12 @@ class SubjectCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        statusView.roundCorners(corners: [.topRight, .bottomRight], radius: 20)
         // Configure the view for the selected state
     }
 
+    
+    override func prepareForReuse() {
+        statusView.isHidden = true
+    }
 }

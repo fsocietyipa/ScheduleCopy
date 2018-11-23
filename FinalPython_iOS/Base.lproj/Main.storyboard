@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JrZ-jl-i6g">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MainVC-->
+        <!--CSSE-1705K-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="FinalPython_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="116" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uuW-Pg-Eq1">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="116" id="tym-Dx-PyX" customClass="SubjectCell" customModule="FinalPython_iOS" customModuleProvider="target">
@@ -87,6 +87,19 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tSR-0c-g3L">
+                                                            <rect key="frame" x="0.0" y="0.0" width="82" height="15"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5c-5s-XWf">
+                                                                    <rect key="frame" x="20" y="3" width="35" height="9"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.42111667990684509" green="0.82692188024520874" blue="0.56073063611984253" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </view>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.3391106128692627" green="0.49854546785354614" blue="0.57339572906494141" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -124,6 +137,8 @@
                                             <outlet property="endTimeLabel" destination="UGM-ap-w8h" id="TcS-VM-Atc"/>
                                             <outlet property="roomNumberLabel" destination="Gfc-nR-bD5" id="tHf-Fk-6bX"/>
                                             <outlet property="startTimeLabel" destination="9yv-gX-vSG" id="bf7-Ob-bsb"/>
+                                            <outlet property="statusLabel" destination="F5c-5s-XWf" id="UMb-go-fPo"/>
+                                            <outlet property="statusView" destination="tSR-0c-g3L" id="83V-wD-ngg"/>
                                             <outlet property="subjectNameLabel" destination="FwF-Ya-G7M" id="nwX-jk-CbI"/>
                                             <outlet property="subjectTypeLabel" destination="2ZV-cy-yTO" id="taP-cZ-ybv"/>
                                             <outlet property="teacherNameLabel" destination="JyS-uN-Qft" id="Lf0-gY-NPY"/>
@@ -163,13 +178,45 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="CSSE-1705K" id="s9i-P2-LnL">
+                        <barButtonItem key="rightBarButtonItem" image="siri" id="ayk-cM-H34">
+                            <connections>
+                                <action selector="addToSiri:" destination="BYZ-38-t0r" id="iBC-lq-lbX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="uuW-Pg-Eq1" id="Scd-HY-amf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="R2Z-4h-F3F">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JrZ-jl-i6g" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mXW-sF-xgk">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.43928924200000002" green="0.43986028430000002" blue="0.74515384439999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dQA-2T-fZt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xvs-vR-hme" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="siri" width="32" height="32"/>
+    </resources>
+    <color key="tintColor" red="0.43928924200000002" green="0.43986028430000002" blue="0.74515384439999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

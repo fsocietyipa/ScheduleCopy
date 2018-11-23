@@ -18,11 +18,45 @@
 		8E16631221A4778D00997005 /* Bebas-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E16630D21A4778D00997005 /* Bebas-Book.ttf */; };
 		8E16631321A4778D00997005 /* Bebas-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E16630E21A4778D00997005 /* Bebas-Bold.ttf */; };
 		8E16631421A4778D00997005 /* Bebas-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E16630F21A4778D00997005 /* Bebas-Thin.ttf */; };
+		8E65A6F821A7F5B00029164F /* Dateble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65A6F721A7F5B00029164F /* Dateble.swift */; };
+		8E65A70421A80A130029164F /* FinalPython_iOS_Intents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8E65A6FD21A80A130029164F /* FinalPython_iOS_Intents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8E65A70A21A80A630029164F /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 8E65A70921A80A630029164F /* Intents.intentdefinition */; };
+		8E65A70C21A80A6B0029164F /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65A70B21A80A6B0029164F /* IntentHandler.swift */; };
+		8E65A70D21A80A7F0029164F /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 8E65A70921A80A630029164F /* Intents.intentdefinition */; };
+		8E65A70E21A80A960029164F /* Dateble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65A6F721A7F5B00029164F /* Dateble.swift */; };
 		8EAF8AB621A58ECF0099823E /* NoClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAF8AB521A58ECF0099823E /* NoClassCell.swift */; };
+		C68E6DADBEDC28EB4E18CA85 /* Pods_FinalPython_iOS_Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 031C44F1FE54F5F100437050 /* Pods_FinalPython_iOS_Intents.framework */; };
 		D7A7C6F7C12456A130FE520A /* Pods_FinalPython_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A1D4F99C78CFBB9FFD8E74 /* Pods_FinalPython_iOS.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8E65A70221A80A130029164F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E1662EB21A4460B00997005 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E65A6FC21A80A130029164F;
+			remoteInfo = FinalPython_iOS_Intents;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8E65A70821A80A130029164F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8E65A70421A80A130029164F /* FinalPython_iOS_Intents.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		031C44F1FE54F5F100437050 /* Pods_FinalPython_iOS_Intents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalPython_iOS_Intents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		082A7AAF11472540E98654F3 /* Pods-FinalPython_iOS_Intents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalPython_iOS_Intents.debug.xcconfig"; path = "Target Support Files/Pods-FinalPython_iOS_Intents/Pods-FinalPython_iOS_Intents.debug.xcconfig"; sourceTree = "<group>"; };
+		3357BD69E9E14E3DFD545FD7 /* Pods-FinalPython_iOS_Intents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalPython_iOS_Intents.release.xcconfig"; path = "Target Support Files/Pods-FinalPython_iOS_Intents/Pods-FinalPython_iOS_Intents.release.xcconfig"; sourceTree = "<group>"; };
 		5F2E6A9245DB9EDC9FB7FC24 /* Pods-FinalPython_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalPython_iOS.release.xcconfig"; path = "Target Support Files/Pods-FinalPython_iOS/Pods-FinalPython_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		8E1662F321A4460B00997005 /* FinalPython_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalPython_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E1662F621A4460B00997005 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +71,12 @@
 		8E16630D21A4778D00997005 /* Bebas-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bebas-Book.ttf"; sourceTree = "<group>"; };
 		8E16630E21A4778D00997005 /* Bebas-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bebas-Bold.ttf"; sourceTree = "<group>"; };
 		8E16630F21A4778D00997005 /* Bebas-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bebas-Thin.ttf"; sourceTree = "<group>"; };
+		8E65A6F721A7F5B00029164F /* Dateble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dateble.swift; sourceTree = "<group>"; };
+		8E65A6FD21A80A130029164F /* FinalPython_iOS_Intents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FinalPython_iOS_Intents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E65A70121A80A130029164F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E65A70921A80A630029164F /* Intents.intentdefinition */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
+		8E65A70B21A80A6B0029164F /* IntentHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntentHandler.swift; path = ../../IntentHandler.swift; sourceTree = "<group>"; };
+		8E65A70F21A80D430029164F /* FinalPython_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinalPython_iOS.entitlements; sourceTree = "<group>"; };
 		8EAF8AB521A58ECF0099823E /* NoClassCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoClassCell.swift; sourceTree = "<group>"; };
 		A7A1D4F99C78CFBB9FFD8E74 /* Pods_FinalPython_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalPython_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F58950D555ECE6CD9ADF47 /* Pods-FinalPython_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalPython_iOS.debug.xcconfig"; path = "Target Support Files/Pods-FinalPython_iOS/Pods-FinalPython_iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -51,6 +91,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8E65A6FA21A80A130029164F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C68E6DADBEDC28EB4E18CA85 /* Pods_FinalPython_iOS_Intents.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -58,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				A7A1D4F99C78CFBB9FFD8E74 /* Pods_FinalPython_iOS.framework */,
+				031C44F1FE54F5F100437050 /* Pods_FinalPython_iOS_Intents.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -66,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				8E1662F521A4460B00997005 /* FinalPython_iOS */,
+				8E65A6FE21A80A130029164F /* FinalPython_iOS_Intents */,
 				8E1662F421A4460B00997005 /* Products */,
 				B793DA6D6EC717DE5B08707A /* Pods */,
 				51EF3327E1602A17969D2889 /* Frameworks */,
@@ -76,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				8E1662F321A4460B00997005 /* FinalPython_iOS.app */,
+				8E65A6FD21A80A130029164F /* FinalPython_iOS_Intents.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,8 +134,10 @@
 		8E1662F521A4460B00997005 /* FinalPython_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				8E65A70F21A80D430029164F /* FinalPython_iOS.entitlements */,
 				8E1662F621A4460B00997005 /* AppDelegate.swift */,
 				8E1662F821A4460B00997005 /* MainVC.swift */,
+				8E65A6F721A7F5B00029164F /* Dateble.swift */,
 				8E1662FA21A4460B00997005 /* Main.storyboard */,
 				8EAF8AB521A58ECF0099823E /* NoClassCell.swift */,
 				8E16630821A449E300997005 /* SubjectCell.swift */,
@@ -108,11 +161,23 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		8E65A6FE21A80A130029164F /* FinalPython_iOS_Intents */ = {
+			isa = PBXGroup;
+			children = (
+				8E65A70921A80A630029164F /* Intents.intentdefinition */,
+				8E65A70121A80A130029164F /* Info.plist */,
+				8E65A70B21A80A6B0029164F /* IntentHandler.swift */,
+			);
+			path = FinalPython_iOS_Intents;
+			sourceTree = "<group>";
+		};
 		B793DA6D6EC717DE5B08707A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				D8F58950D555ECE6CD9ADF47 /* Pods-FinalPython_iOS.debug.xcconfig */,
 				5F2E6A9245DB9EDC9FB7FC24 /* Pods-FinalPython_iOS.release.xcconfig */,
+				082A7AAF11472540E98654F3 /* Pods-FinalPython_iOS_Intents.debug.xcconfig */,
+				3357BD69E9E14E3DFD545FD7 /* Pods-FinalPython_iOS_Intents.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -129,15 +194,35 @@
 				8E1662F021A4460B00997005 /* Frameworks */,
 				8E1662F121A4460B00997005 /* Resources */,
 				AF64D4FB7300DA796DDBA5D4 /* [CP] Embed Pods Frameworks */,
+				8E65A70821A80A130029164F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8E65A70321A80A130029164F /* PBXTargetDependency */,
 			);
 			name = FinalPython_iOS;
 			productName = FinalPython_iOS;
 			productReference = 8E1662F321A4460B00997005 /* FinalPython_iOS.app */;
 			productType = "com.apple.product-type.application";
+		};
+		8E65A6FC21A80A130029164F /* FinalPython_iOS_Intents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E65A70521A80A130029164F /* Build configuration list for PBXNativeTarget "FinalPython_iOS_Intents" */;
+			buildPhases = (
+				B8D3220943DC30C20F5584EC /* [CP] Check Pods Manifest.lock */,
+				8E65A6F921A80A130029164F /* Sources */,
+				8E65A6FA21A80A130029164F /* Frameworks */,
+				8E65A6FB21A80A130029164F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FinalPython_iOS_Intents;
+			productName = FinalPython_iOS_Intents;
+			productReference = 8E65A6FD21A80A130029164F /* FinalPython_iOS_Intents.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -150,6 +235,14 @@
 				ORGANIZATIONNAME = fsociety.1;
 				TargetAttributes = {
 					8E1662F221A4460B00997005 = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
+					};
+					8E65A6FC21A80A130029164F = {
 						CreatedOnToolsVersion = 10.0;
 					};
 				};
@@ -168,6 +261,7 @@
 			projectRoot = "";
 			targets = (
 				8E1662F221A4460B00997005 /* FinalPython_iOS */,
+				8E65A6FC21A80A130029164F /* FinalPython_iOS_Intents */,
 			);
 		};
 /* End PBXProject section */
@@ -185,6 +279,13 @@
 				8E16631121A4778D00997005 /* Bebas-Regular.ttf in Resources */,
 				8E1662FC21A4460B00997005 /* Main.storyboard in Resources */,
 				8E16631421A4778D00997005 /* Bebas-Thin.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E65A6FB21A80A130029164F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +340,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FinalPython_iOS/Pods-FinalPython_iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B8D3220943DC30C20F5584EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FinalPython_iOS_Intents-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -246,6 +369,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E65A70D21A80A7F0029164F /* Intents.intentdefinition in Sources */,
+				8E65A6F821A7F5B00029164F /* Dateble.swift in Sources */,
 				8E16630921A449E300997005 /* SubjectCell.swift in Sources */,
 				8E1662F921A4460B00997005 /* MainVC.swift in Sources */,
 				8E1662F721A4460B00997005 /* AppDelegate.swift in Sources */,
@@ -253,7 +378,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8E65A6F921A80A130029164F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E65A70A21A80A630029164F /* Intents.intentdefinition in Sources */,
+				8E65A70E21A80A960029164F /* Dateble.swift in Sources */,
+				8E65A70C21A80A6B0029164F /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8E65A70321A80A130029164F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E65A6FC21A80A130029164F /* FinalPython_iOS_Intents */;
+			targetProxy = 8E65A70221A80A130029164F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8E1662FA21A4460B00997005 /* Main.storyboard */ = {
@@ -395,7 +538,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D8F58950D555ECE6CD9ADF47 /* Pods-FinalPython_iOS.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FinalPython_iOS/FinalPython_iOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86R6TV7GW4;
 				INFOPLIST_FILE = FinalPython_iOS/Info.plist;
@@ -414,7 +559,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5F2E6A9245DB9EDC9FB7FC24 /* Pods-FinalPython_iOS.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FinalPython_iOS/FinalPython_iOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86R6TV7GW4;
 				INFOPLIST_FILE = FinalPython_iOS/Info.plist;
@@ -424,6 +571,46 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fsociety1.FinalPython-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8E65A70621A80A130029164F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 082A7AAF11472540E98654F3 /* Pods-FinalPython_iOS_Intents.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 86R6TV7GW4;
+				INFOPLIST_FILE = FinalPython_iOS_Intents/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fsociety1.FinalPython-iOS.FinalPython-iOS-Intents";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8E65A70721A80A130029164F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3357BD69E9E14E3DFD545FD7 /* Pods-FinalPython_iOS_Intents.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 86R6TV7GW4;
+				INFOPLIST_FILE = FinalPython_iOS_Intents/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fsociety1.FinalPython-iOS.FinalPython-iOS-Intents";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -446,6 +633,15 @@
 			buildConfigurations = (
 				8E16630621A4460D00997005 /* Debug */,
 				8E16630721A4460D00997005 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E65A70521A80A130029164F /* Build configuration list for PBXNativeTarget "FinalPython_iOS_Intents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E65A70621A80A130029164F /* Debug */,
+				8E65A70721A80A130029164F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
